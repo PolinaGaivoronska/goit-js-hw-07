@@ -1,0 +1,22 @@
+.gallery {
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #b6b6b6;
+}
+.gallery-item {
+    list-style: none;
+    transition: transform 250ms ease;
+}
+.gallery-item:not(:last-child) {
+    margin-right: 20px;
+}
+.gallery-item:hover {
+    transform: scale(1.1);
+}
+.gallery-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
