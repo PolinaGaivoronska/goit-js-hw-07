@@ -18,13 +18,12 @@ const images = [
     },
   ];
   
-  galleryEl.classList.add(`${selector}`)
-  galleryEl.insertAdjacentHTML(
-      "afterbegin",
-      images.reduce((acc, {url, alt}) => {
-        acc += `<li class="${selector}-item"><img class="${selector}-image" src="${url}" alt=${alt}/></li>`;
-        
-        return acc;
-    }, ""),
-    );
+  galleryEl.classList.add(`${selector}`);
+
+  let imgToInsert = images.reduce((acc, {url, alt}) => {
+    acc += `<li class="${selector}-item"><img class="${selector}-image" src="${url}" alt=${alt}/></li>`;
+    
+    return acc;
+  }, "");
+  galleryEl.insertAdjacentHTML("afterbegin", imgToInsert);
   
